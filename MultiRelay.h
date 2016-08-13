@@ -23,8 +23,6 @@
 #ifndef MULTIRELAY_H
 #define MULTIRELAY_H
 
-#include <stdarg.h>
-
 class MultiRelay {
 public:
     MultiRelay(int pin);

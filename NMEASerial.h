@@ -36,7 +36,7 @@ public:
 
     class ISerialHandler {
     public:
-        virtual void onMessage(NMEASerial* serial, String message) = 0;
+        virtual void onMessage(String message) = 0;
     };
 
     NMEASerial(ISerialHandler* handler);

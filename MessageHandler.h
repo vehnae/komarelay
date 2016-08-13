@@ -30,7 +30,7 @@
 
 class MessageHandler : public NMEASerial::ISerialHandler {
 public:
-    void onMessage(NMEASerial* serial, String message);
+    void onMessage(String message);
 
     void registerCommand(const String& command, void(*callback)(const String&));
 

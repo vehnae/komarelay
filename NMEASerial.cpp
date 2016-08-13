@@ -20,7 +20,7 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-#include "NMEASerial.h"
+ #include "NMEASerial.h"
 
 NMEASerial::NMEASerial(ISerialHandler* handler) :
     m_serialHandler(handler) {
@@ -37,7 +37,7 @@ void NMEASerial::onSerialEvent() {
                 m_buffer = "";
                 m_buffer.reserve(BUFFER_SIZE);
             }
-            break;
+        break;
         case STATE_IN_MESSAGE:
             if (input == '*') {
                 m_state = STATE_CHECKSUM_1;
@@ -58,7 +58,7 @@ void NMEASerial::onSerialEvent() {
             m_state = STATE_WAITING_START;
             m_checksum[1] = input;
             if (checksumValid(m_buffer, m_checksum))
-                m_serialHandler->onMessage(this, m_buffer);
+                m_serialHandler->onMessage(m_buffer);
             m_buffer = "";
             m_buffer.reserve(BUFFER_SIZE);
             break;

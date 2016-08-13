@@ -26,6 +26,7 @@
 #include "Version.h"
 
 #define NUM_RELAYS 4
+#define BOARD_NAME "KOMARELAY"
 
 static MultiRelay relays[NUM_RELAYS] = {
     MultiRelay(2, 3),
@@ -53,7 +54,7 @@ void serialEvent() {
 }
 
 void test(const String&) {
-    serial.print(String("KOMARELAY,VER=") + KOMARELAY_VERSION);
+    serial.print(String(BOARD_NAME) + String(",VER=") + String(KOMARELAY_VERSION));
 }
 
 void status(const String&) {

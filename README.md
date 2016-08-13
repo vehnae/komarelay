@@ -4,8 +4,7 @@ An Arduino sketch for controlling a relay board with AC connections. This means 
 
 ## Configuration
 
-Edit *KomaRelay.ino* and define the number of relays and the digital pins they are connected into. By default the relay #4 (R4) is connected to the LED pin
-(13) for testing.
+Edit *KomaRelay.ino* and define the number of relays and the digital pins they are connected into. By default the relay #4 (R4) is connected to the LED pin (13) for testing. If you plan to use multiple boards you should also update the board name to be unique.
 
 ## Command set
 

@@ -1,6 +1,6 @@
 # KomaRelay
 
-An Arduino sketch for controlling a relay board with AC connections. This means that we use two relays per socket to cut off both the live and neutral connections at the same time. The sketch includes a serial interface using NMEA commands.
+An Arduino sketch for controlling a relay board with AC connections. This means that we use two relays per socket to cut off both the live and neutral connections at the same time. The sketch includes a serial interface using [NMEA commands](http://www.hhhh.org/wiml/proj/nmeaxor.html).
 
 ## Configuration
 
